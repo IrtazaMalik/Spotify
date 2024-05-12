@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='pic2.jpg') }}'); /* Use url_for to generate the correct URL */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fallback font */
+            color: white; /* Text color */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        /* Blurry black box */
+        .blurry-box {
+            background-color: rgba(0, 0, 0, 0.7); /* Black with transparency */
+            backdrop-filter: blur(10px); /* Apply blur effect */
+            border-radius: 10px; /* Rounded corners */
+            padding: 40px; /* Increased padding inside the box */
+            text-align: center; /* Center text */
+            max-width: 400px; /* Limited width */
+        }
+
+        /* Sign up form styling */
+        form {
+            margin-top: 20px; /* Spacing from the blurry box */
+        }
+
+        /* Label styling */
+        label {
+            display: block; /* Display labels as blocks */
+            margin-bottom: 10px; /* Increased spacing between labels */
+            color: #1DB954; /* Green color for labels */
+            font-weight: bold; /* Bold font for labels */
+            font-size: 16px; /* Increased font size for labels */
+        }
+
+        /* Input field styling */
+        input {
+            width: 100%; /* Full width */
+            padding: 12px; /* Increased padding */
+            margin-bottom: 20px; /* Increased spacing between inputs */
+            border-radius: 5px; /* Rounded corners */
+            border: none; /* No border */
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+            color: #fff; /* White text */
+            font-size: 16px; /* Font size */
+        }
+
+        /* Button styling */
+        button {
+            width: 100%; /* Full width */
+            padding: 12px; /* Increased padding */
+            border-radius: 5px; /* Rounded corners */
+            border: none; /* No border */
+            background-color: #1DB954; /* Green background */
+            color: white; /* White text */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #168f3f; /* Darker green on hover */
+        }
+
+        h1 {
+            margin-bottom: 30px; /* Increased spacing below the title */
+            color: #1DB954; /* Green color for title */
+            font-size: 32px; /* Font size */
+            font-weight: bold; /* Bold font for title */
+        }
+    </style>
+</head>
+<body>
+    <div class="blurry-box">
+        <h1>Sign Up Page</h1>
+        <!-- Your sign up form goes here -->
+        <form action="/login" method="post"> <!-- Change action to "/login" to redirect to the login page -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
+

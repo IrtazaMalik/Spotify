@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-color: #121212; /* Dark background color */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Adding a modern font */
+            color: #fff; /* Text color */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        /* Container for content */
+        .container {
+            padding: 20px;
+        }
+        /* Style for header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333; /* Add border */
+            padding-bottom: 10px; /* Add padding */
+        }
+        /* Style for navigation */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s; /* Smooth transition */
+        }
+        nav ul li a:hover {
+            color: #1DB954; /* Change color on hover */
+        }
+        /* Style for search bar */
+        .search-bar {
+            margin-top: 20px;
+        }
+        .search-bar input[type="text"] {
+            padding: 10px; /* Adjust padding */
+            width: 200px;
+            border: none; /* Remove border */
+            border-radius: 20px; /* Rounded corners */
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Text color */
+        }
+        .search-bar button {
+            padding: 10px 20px; /* Adjust padding */
+            background-color: #1DB954;
+            color: #fff;
+            border: none;
+            border-radius: 20px; /* Rounded corners */
+            cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .search-bar button:hover {
+            background-color: #168f3f; /* Darker color on hover */
+        }
+        /* Style for main content */
+        main {
+            text-align: center;
+        }
+        section {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h2 {
+            color: #fff; /* Text color */
+            font-weight: bold; /* Make headings bold */
+            font-size: 24px; /* Adjust font size */
+            margin-bottom: 20px; /* Add spacing */
+        }
+        /* Style for footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+            margin-top: 50px; /* Add spacing from the content */
+        }
+        /* Style for footer links */
+        footer a {
+            color: #1DB954; /* Green color for links */
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s; /* Smooth transition */
+        }
+        footer a:hover {
+            color: #fff; /* Change color on hover */
+        }
+        /* Style for social media icons */
+        .social-media img {
+            width: 30px; /* Adjust the width of social media icons */
+            margin: 0 5px; /* Add some space between icons */
+            transition: transform 0.3s; /* Smooth transition */
+        }
+        .social-media img:hover {
+            transform: scale(1.1); /* Increase size on hover */
+        }
+        /* Centering specific headings */
+        .center-heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Logo styling */
+        .logo img {
+            width: 50px; /* Adjust the width of the logo */
+            transition: transform 0.3s; /* Smooth transition */
+        }
+        .logo img:hover {
+            transform: rotate(360deg); /* Rotate on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for content -->
+    <div class="container">
+        <!-- Header section -->
+        <header>
+            <div class="logo">
+                <img src="logo.jpg" alt="Streaming Service Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Playlists</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="search()">Search</button>
+            </div>
+        </header>
+    
+        <!-- Main content section -->
+        <main>
+            <!-- Trending playlists section -->
+            <section class="trending center-heading">
+                <h2>Trending Playlists</h2>
+                <div class="playlist-container" id="trendingPlaylists">
+                    <!-- Trending playlists will be dynamically generated here -->
+                </div>
+            </section>
+    
+            <!-- Top charts section -->
+            <section class="top-charts center-heading">
+                <h2>Top Charts</h2>
+                <div class="chart-container" id="topCharts">
+                    <!-- Top charts will be dynamically generated here -->
+                </div>
+            </section>
+    
+            <!-- New releases section -->
+            <section class="new-releases center-heading">
+                <h2>New Releases</h2>
+                <div class="release-container" id="newReleases">
+                    <!-- New releases will be dynamically generated here -->
+                </div>
+            </section>
+        </main>
+    
+        <!-- Footer section -->
+        <footer>
+            <!-- Social media links -->
+            <div class="social-media">
+                <a href="#"><img src="fb.jpg" alt="Facebook"></a>
+                <a href="#"><img src="tw.jpg" alt="Twitter"></a>
+                <a href="#"><img src="insta.jpg" alt="Instagram"></a>
+            </div>
+            <!-- Legal links -->
+            <div class="legal-links">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Copyright Information</a>
+            </div>
+            <!-- Contact information -->
+            <div class="contact-info">
+                <p>Contact: support@musicstreaming.com</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript code can be placed here -->
+    <script>
+        // JavaScript code for dynamic content generation can be placed here
+    </script>
+</body>
+</html>
+

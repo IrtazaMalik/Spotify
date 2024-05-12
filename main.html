@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{{ url_for('static', filename='pic1.jpg') }}');
+            background-size: cover;
+            background-position: center top 10%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            animation: backgroundAnimation 30s ease infinite alternate;
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0 10%; }
+            100% { background-position: 80% 10%; }
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin-top: 15%;
+            position: relative; /* Added for absolute positioning */
+        }
+
+        .container h1 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #000;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .container .login-button, .container .signup-button {
+            display: inline-block;
+            width: 150px;
+            margin: 10px;
+            background-color: #1DB954; /* Changed button color to green */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container .login-button:hover, .container .signup-button:hover {
+            background-color: #168f3f; /* Darker color on hover */
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+
+        /* Added styles for top right buttons */
+        .top-right-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-right-buttons button {
+            background-color: transparent;
+            border: 2px solid #000; /* Border color changed to black */
+            color: #000; /* Text color changed to black */
+            cursor: pointer;
+            font-size: 14px;
+            padding: 8px 16px;
+            margin-left: 10px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .top-right-buttons button:hover {
+            background-color: #000; /* Darker color on hover */
+            color: #fff; /* Text color changed to white on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Added top right buttons -->
+    <div class="top-right-buttons">
+        <button onclick="window.location.href='about.html'">About Us</button>
+        <button onclick="window.location.href='terms.html'">Terms and Conditions</button>
+    </div>
+    
+    <div class="container">
+        <h1><i class="icon fas fa-music"></i> <span style="color: white;">Spotify</span></h1>
+        <p style="color: black;">Discover and enjoy millions of songs, <span style="font-weight: bold;">anytime, anywhere.</span></p>
+        <button class="login-button" onclick="window.location.href='/login'">Login</button>
+<button class="signup-button" onclick="window.location.href='/signup'">Sign Up</button>
+
+    </div>
+</body>
+</html>
+
